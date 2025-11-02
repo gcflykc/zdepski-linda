@@ -70,12 +70,12 @@
 
   <script>
     function verificar() {
-      const resposta = document.getElementById("resposta").value.trim();
-      const senhaCorreta = "Laura"; 
+      const resposta = document.getElementById("resposta").value.trim().toLowerCase();
+      const senhaCorreta = "laura"; // tudo minúsculo
       const mensagemErro = document.getElementById("mensagemErro");
 
-      // Deixa a comparação insensível a maiúsculas/minúsculas
-      if (resposta.toLowerCase() === senhaCorreta.toLowerCase()) {
+      if (resposta === senhaCorreta) {
+        // Troque o caminho se o parabens.html estiver em outra pasta
         window.location.href = "parabens.html";
       } else {
         mensagemErro.style.display = "block";
