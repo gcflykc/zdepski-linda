@@ -62,7 +62,7 @@
   <h1>oi, idosa 💖</h1>
   <p>vc trabalhou e dançou o dia todo, das 7h às 20h então...  
   agora é hora de relaxar e brincar um pouquinho ✨</p>
-  <p>dica: ja sabe</p>
+  <p>dica: já sabe 😘</p>
 
   <input type="text" id="resposta" placeholder="Digite aqui...">
   <button onclick="verificar()">Enviar</button>
@@ -70,11 +70,12 @@
 
   <script>
     function verificar() {
-      const resposta = document.getElementById("resposta").value.trim().toLowerCase();
-      const senhaCorreta = "Laura"; // 👉 Mude aqui a palavra secreta
+      const resposta = document.getElementById("resposta").value.trim();
+      const senhaCorreta = "Laura"; 
       const mensagemErro = document.getElementById("mensagemErro");
 
-      if (resposta === senhaCorreta) {
+      // Deixa a comparação insensível a maiúsculas/minúsculas
+      if (resposta.toLowerCase() === senhaCorreta.toLowerCase()) {
         window.location.href = "parabens.html";
       } else {
         mensagemErro.style.display = "block";
